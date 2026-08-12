@@ -129,20 +129,19 @@ section h2{
 }
 
 .formulario button{
-    margin-top:25px;
-    background:#005b96;
-    color:white;
-    border:none;
-    padding:15px 30px;
-    border-radius:25px;
-    cursor:pointer;
-    font-size:16px;
+margin-top:25px;
+background:#005b96;
+color:white;
+border:none;
+padding:15px 30px;
+border-radius:25px;
+cursor:pointer;
+font-size:16px;
 }
 
-.formulario button:hover{
-    background:#004a7c;
+.formulario button:hover {
+    background:#004875;
 }
-
 /*=========================================
     PIE DE PÁGINA
 =========================================*/
@@ -273,4 +272,121 @@ a.boton-solicitar-fijo {
     padding: 12px 22px;
 
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+/* =========================================
+   AJUSTES PARA CELULARES
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    /* Encabezado */
+    .encabezado-fijo {
+        position: relative;
+    }
+
+    body {
+        padding-top: 0;
+    }
+
+    /* Logo */
+    .encabezado-fijo header {
+        padding: 10px 0;
+    }
+
+    .encabezado-fijo header img {
+        max-height: 80px !important;
+    }
+
+    /* Nombre de la empresa */
+    .nombre-empresa {
+        font-size: 1.25rem;
+        letter-spacing: 1px;
+        line-height: 1.2;
+        margin-top: 10px;
+    }
+
+    .nombre-empresa::after {
+        width: 80%;
+        max-width: 280px;
+    }
+
+    /* Información de contacto */
+    .encabezado-fijo .col-lg-3 {
+        text-align: center !important;
+        margin-top: 10px;
+    }
+
+    /* Menú */
+    .encabezado-fijo nav {
+        position: relative;
+    }
+
+    /* Banner */
+    .banner-img {
+        width: 100%;
+        height: 320px;
+        object-fit: cover;
+    }
+
+    .carousel-caption {
+        bottom: 8%;
+        padding: 10px;
+    }
+
+    .carousel-caption h1 {
+        font-size: 24px;
+    }
+
+    .carousel-caption p {
+        font-size: 15px;
+    }
+
+    .carousel-caption .btn {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    /* Secciones */
+    section {
+        padding: 40px 15px;
+    }
+
+    /* Galería */
+    .galeria-img {
+        height: 250px;
+    }
+
+    .historia-trabajo {
+        padding: 15px;
+        margin-top: 15px;
+    }
+
+    .historia-trabajo h3 {
+        font-size: 20px;
+    }
+
+    .historia-trabajo p {
+        font-size: 14px;
+    }
+
+    /* Botón solicitar servicio */
+    a.boton-solicitar-fijo {
+        right: 15px !important;
+        bottom: 15px !important;
+        font-size: 14px;
+        padding: 10px 16px;
+        z-index: 9999 !important;
+    }
+
+    /* Footer */
+    footer {
+        position: relative !important;
+        width: 100%;
+        height: auto !important;
+        min-height: 0 !important;
+        padding: 20px 10px !important;
+        margin: 0 !important;
+        font-size: 13px;
+    }
+
 }
