@@ -1,0 +1,276 @@
+/* ===== CONFIGURACIÓN GENERAL ===== */
+
+/*=========================================
+    ESTILOS GENERALES
+=========================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f7fa;
+}
+
+/*=========================================
+    ENCABEZADO
+=========================================*/
+
+header{
+    background:#ffffff;
+    padding:15px 0;
+    border-bottom:1px solid #ddd;
+}
+
+/*=========================================
+    MENÚ
+=========================================*/
+
+nav{
+    box-shadow:0 2px 8px rgba(0,0,0,.15);
+}
+
+nav a{
+    font-weight:bold;
+}
+
+/*=========================================
+    CARRUSEL
+=========================================*/
+
+.banner-img{
+    width:200%;
+    height:600px;
+    object-fit:cover;
+    
+}
+
+.carousel-caption{
+    bottom:18%;
+}
+
+.carousel-caption h1{
+    font-size:42px;
+    font-weight:bold;
+    text-shadow:2px 2px 10px rgba(0,0,0,.8);
+}
+
+.carousel-caption p{
+    font-size:22px;
+    text-shadow:2px 2px 10px rgba(0,0,0,.8);
+}
+
+.carousel-caption .btn{
+    margin:8px;
+}
+
+/*=========================================
+    SECCIONES
+=========================================*/
+
+section{
+    padding:60px 0;
+}
+
+section h2{
+    color:#005b96;
+    margin-bottom:25px;
+    font-weight:bold;
+}
+
+/*=========================================
+    TARJETAS DE SERVICIOS
+=========================================*/
+
+.card{
+    border:none;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+/*=========================================
+    FORMULARIO
+=========================================*/
+
+.formulario{
+    width:60%;
+    margin:40px auto;
+    background:#ffffff;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.formulario label{
+    display:block;
+    margin-top:15px;
+    font-weight:bold;
+}
+
+.formulario input,
+.formulario textarea,
+.formulario select{
+    width:100%;
+    padding:12px;
+    margin-top:5px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+.formulario textarea{
+    height:120px;
+}
+
+.formulario button{
+    margin-top:25px;
+    background:#005b96;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    border-radius:25px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.formulario button:hover{
+    background:#004a7c;
+}
+
+/*=========================================
+    PIE DE PÁGINA
+=========================================*/
+
+footer{
+    background:#002b4d;
+    color:white;
+}
+/* =========================================
+   ENCABEZADO Y MENÚ FIJO
+========================================= */
+
+.encabezado-fijo{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    background:white;
+}
+
+/* Evita que el contenido quede escondido
+   detrás del encabezado */
+
+body{
+    padding-top:180px;
+}
+
+/* Menú */
+
+.encabezado-fijo nav{
+    position:relative;
+}
+/* ==========================================
+   GALERÍA DE MANTENIMIENTO
+========================================== */
+
+.trabajo-slide {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+}
+
+.trabajo-imagen {
+    width: 65%;
+}
+
+.trabajo-historia {
+    width: 35%;
+}
+
+.galeria-img {
+    width: 100%;
+    height: 450px;
+    object-fit: contain;
+    background: #f5f5f5;
+    border-radius: 12px;
+}
+
+.historia-trabajo {
+    padding: 25px;
+    background: #f4f7fa;
+    border-radius: 15px;
+}
+
+.historia-trabajo h3 {
+    color: #005b96;
+    font-weight: bold;
+}
+
+.historia-trabajo h5 {
+    color: #333;
+    margin-top: 15px;
+}
+
+.historia-trabajo p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* =========================================
+   NOMBRE DE LA EMPRESA
+========================================= */
+
+.nombre-empresa {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    line-height: 1.15;
+    color: #005b96;
+    margin-bottom: 8px;
+}
+
+.nombre-empresa::after {
+    content: "";
+    display: block;
+    width: 500px;
+    height: 3px;
+    background: #005b96;
+    margin: 10px auto 0;
+    border-radius: 5px;
+}
+/* =========================================
+   BOTÓN SOLICITAR SERVICIO FIJO
+========================================= */
+
+a.boton-solicitar-fijo {
+    position: fixed !important;
+    display: block !important;
+
+    right: 25px !important;
+    bottom: 25px !important;
+
+    top: auto !important;
+    left: auto !important;
+
+    z-index: 99999 !important;
+
+    width: auto !important;
+    height: auto !important;
+
+    margin: 0 !important;
+
+    border-radius: 30px;
+    padding: 12px 22px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}

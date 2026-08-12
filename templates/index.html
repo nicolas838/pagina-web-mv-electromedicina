@@ -1,0 +1,1808 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <title>MISAEL VILLARRAGA ELECTROMEDICINA S.A.S.</title>
+
+    <!-- ============================= -->
+    <!-- BOOTSTRAP -->
+    <!-- ============================= -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- ============================= -->
+    <!-- BOOTSTRAP ICONS -->
+    <!-- ============================= -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- ============================= -->
+    <!-- CSS PROPIO -->
+    <!-- ============================= -->
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/estilos.css') }}">
+
+</head>
+
+
+<body>
+
+
+<!-- ===================================================== -->
+<!-- ENCABEZADO FIJO -->
+<!-- ===================================================== -->
+
+<div class="encabezado-fijo">
+
+
+    <!-- ================================================= -->
+    <!-- ENCABEZADO -->
+    <!-- ================================================= -->
+
+    <header class="bg-white shadow-sm">
+
+        <div class="container py-3">
+
+            <div class="row align-items-center">
+
+
+                <!-- ===================================== -->
+                <!-- LOGO -->
+                <!-- ===================================== -->
+
+                <div class="col-lg-2 col-md-3 text-center">
+
+                    <img
+                        src="{{ url_for('static', filename='img/logo.jpg.jpeg') }}"
+                        alt="Logo Misael Villarraga Electromedicina"
+                        class="img-fluid"
+                        style="max-height:120px;">
+
+                </div>
+
+
+                <!-- ===================================== -->
+                <!-- INFORMACIÓN DE LA EMPRESA -->
+                <!-- ===================================== -->
+
+                <div class="col-lg-7 col-md-5 text-center">
+
+                   <h2 class="nombre-empresa">
+                        MISAEL VILLARRAGA ELECTROMEDICINA S.A.S.
+                  </h2>
+
+                    <p class="mb-1 fs-5">
+
+                        Ingeniería Biomédica Especializada
+
+                    </p>
+
+
+                    <small class="text-secondary">
+
+                        Mantenimiento • Verificación de medidas • Soporte Técnico
+
+                    </small>
+
+                </div>
+
+
+                <!-- ===================================== -->
+                <!-- DATOS DE CONTACTO -->
+                <!-- ===================================== -->
+
+                <div class="col-lg-3 col-md-4 text-end">
+
+
+                    <!-- ADMINISTRATIVO -->
+
+                    <p class="mb-1">
+
+                        <i class="bi bi-telephone-fill"></i>
+
+                        <strong>Administrativo:</strong><br>
+
+                        310 235 06 42
+
+                    </p>
+
+
+                    <!-- ÁREA DOCUMENTAL -->
+
+                    <p class="mb-1">
+
+                        <i class="bi bi-file-earmark-text-fill"></i>
+
+                        <strong>Área Documental:</strong><br>
+
+                        310 861 59 10
+
+                    </p>
+
+
+                    <!-- CORREO -->
+
+                    <p class="mb-2">
+
+                        <i class="bi bi-envelope-fill"></i>
+
+                        mv_electromedicina@gmail.com
+
+                    </p>
+
+
+                    <!-- WHATSAPP -->
+
+                    <a
+                        href="https://wa.me/573102350642"
+                        target="_blank"
+                        class="btn btn-success btn-sm me-1"
+                        title="WhatsApp">
+
+                        <i class="bi bi-whatsapp"></i>
+
+                    </a>
+
+
+                    <!-- FACEBOOK -->
+
+                    <a
+                        href="https://www.facebook.com/share/1FcEyiPLwK/"
+                        target="_blank"
+                        class="btn btn-primary btn-sm"
+                        title="Facebook">
+
+                        <i class="bi bi-facebook"></i>
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ================================================= -->
+    <!-- MENÚ -->
+    <!-- ================================================= -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+        <div class="container">
+
+
+            <!-- INICIO -->
+
+            <a
+                class="navbar-brand"
+                href="/">
+
+                Inicio
+
+            </a>
+
+
+            <!-- BOTÓN MÓVIL -->
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <!-- OPCIONES -->
+
+            <div
+                class="collapse navbar-collapse"
+                id="menu">
+
+                <ul class="navbar-nav ms-auto">
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="#empresa">
+
+                            Nosotros
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="#servicios">
+
+                            Servicios
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="#contacto">
+
+                            Contacto
+
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+</div>
+
+
+
+<!-- ===================================================== -->
+<!-- BANNER / CARRUSEL -->
+<!-- ===================================================== -->
+
+<div
+    id="bannerPrincipal"
+    class="carousel slide carousel-fade"
+    data-bs-ride="carousel"
+    data-bs-interval="3000">
+
+
+    <div class="carousel-inner">
+
+
+        <!-- =============================================== -->
+        <!-- IMAGEN 1 -->
+        <!-- =============================================== -->
+
+        <div class="carousel-item active">
+
+
+            <img
+                src="{{ url_for('static', filename='img/banner.jpg.jpg') }}"
+                class="d-block w-100 banner-img"
+                alt="Mantenimiento de equipos biomédicos">
+
+
+            <div class="carousel-caption">
+
+
+                <h1>
+
+                    Mantenimiento de Equipos Biomédicos
+
+                </h1>
+
+
+                <p>
+
+                    Especialistas en mantenimiento preventivo,
+                    correctivo y soporte técnico.
+
+                </p>
+
+
+                <!-- WHATSAPP -->
+
+                <a
+                    href="https://wa.me/573102350642"
+                    target="_blank"
+                    class="btn btn-outline-light btn-lg">
+
+                    <i class="bi bi-whatsapp"></i>
+
+                    WhatsApp
+
+                </a>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =============================================== -->
+        <!-- IMAGEN 2 -->
+        <!-- =============================================== -->
+
+        <div class="carousel-item">
+
+
+            <img
+                src="{{ url_for('static', filename='img/img.banner.3.jpg') }}"
+                class="d-block w-100 banner-img"
+                alt="Servicio técnico especializado">
+
+
+            <div class="carousel-caption">
+
+
+                <h1>
+
+                    Servicio Técnico Especializado
+
+                </h1>
+
+
+                <p>
+
+                    Soluciones para laboratorio clínico,
+                    terapia respiratoria, fisioterapia,
+                    toma de muestras y consultorio médico.
+
+                </p>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =============================================== -->
+        <!-- IMAGEN 3 -->
+        <!-- =============================================== -->
+
+        <div class="carousel-item">
+
+
+            <img
+                src="{{ url_for('static', filename='img/img.banner.1.jpg') }}"
+                class="d-block w-100 banner-img"
+                alt="Verificación de medidas">
+
+
+            <div class="carousel-caption">
+
+
+                <h1>
+
+                    Verificación de Medidas
+
+                </h1>
+
+
+                <p>
+
+                    Garantizamos el correcto funcionamiento
+                    de sus equipos.
+
+                </p>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =============================================== -->
+        <!-- IMAGEN 4 -->
+        <!-- =============================================== -->
+
+        <div class="carousel-item">
+
+
+            <img
+                src="{{ url_for('static', filename='img/img.banner.4.jpg') }}"
+                class="d-block w-100 banner-img"
+                alt="Compromiso con la calidad">
+
+
+            <div class="carousel-caption">
+
+
+                <h1>
+
+                    Compromiso con la Calidad
+
+                </h1>
+
+
+                <p>
+
+                    Atención profesional y soporte oportuno.
+
+                </p>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =============================================== -->
+    <!-- BOTÓN ANTERIOR -->
+    <!-- =============================================== -->
+
+    <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#bannerPrincipal"
+        data-bs-slide="prev">
+
+        <span class="carousel-control-prev-icon"></span>
+
+        <span class="visually-hidden">
+
+            Anterior
+
+        </span>
+
+    </button>
+
+
+
+    <!-- =============================================== -->
+    <!-- BOTÓN SIGUIENTE -->
+    <!-- =============================================== -->
+
+    <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#bannerPrincipal"
+        data-bs-slide="next">
+
+        <span class="carousel-control-next-icon"></span>
+
+        <span class="visually-hidden">
+
+            Siguiente
+
+        </span>
+
+    </button>
+
+
+</div>
+
+<!-- =========================================
+     BOTÓN SOLICITAR SERVICIO FIJO
+========================================= -->
+
+<a href="{{ url_for('solicitud') }}"
+   class="btn btn-success btn-lg boton-solicitar-fijo">
+
+    Solicitar Servicio
+
+</a>
+
+<!-- ===================================================== -->
+<!-- SOBRE NOSOTROS -->
+<!-- ===================================================== -->
+
+<section
+    id="empresa"
+    class="container py-5">
+
+
+    <h2 class="text-center mb-4">
+
+        Sobre Nosotros
+
+    </h2>
+
+
+    <p class="text-center">
+
+      Somos una micro empresa que cuenta con mas de 10 años de 
+      experiencia dentro del mercado, en el mantenimiento correctivo, 
+      preventivo y verificación de medidas de los equipos biomédicos, 
+      destacando en nuestro servicio  con responsabilidad y calidad, dando repuesta oportuna a laboratorios clínicos  y  consultorios médicos .
+
+    </p>
+
+
+</section>
+
+<!-- ===================================================== -->
+<!-- CAPACITACIÓN -->
+<!-- ===================================================== -->
+
+<section
+    id="capacitacion"
+    class="container py-5">
+
+    <h2 class="text-center mb-4">
+        Capacitación
+    </h2>
+
+    <p class="text-center">
+        Brindamos capacitación y orientación técnica
+        relacionada con el manejo, funcionamiento y
+        mantenimiento de equipos biomédicos.
+    </p>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- SERVICIOS -->
+<!-- ===================================================== -->
+
+<section
+    id="servicios"
+    class="container py-5">
+
+    <h2 class="text-center mb-4">
+        Nuestros Servicios
+    </h2>
+
+    <div class="row g-4">
+
+
+    <!-- ============================================= -->
+    <!-- MANTENIMIENTO PREVENTIVO -->
+    <!-- ============================================= -->
+
+    <div class="col-md-4">
+
+        <div class="card shadow h-100 servicio-clic"
+             data-bs-toggle="modal"
+             data-bs-target="#galeriaPreventivo"
+             style="cursor:pointer;">
+
+            <div class="card-body text-center">
+
+                <i class="bi bi-tools fs-1 text-primary"></i>
+
+                <h4 class="mt-3">
+                    Mantenimiento Preventivo
+                </h4>
+
+                <p>
+                    Inspección, limpieza,
+                    verificación y pruebas funcionales.
+                </p>
+
+                <span class="btn btn-primary">
+                    Ver trabajos realizados
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+  <!-- ============================================= -->
+<!-- MANTENIMIENTO CORRECTIVO -->
+<!-- ============================================= -->
+
+<div class="col-md-4">
+
+    <div class="card shadow h-100 servicio-clic"
+         data-bs-toggle="modal"
+         data-bs-target="#galeriaCorrectivo"
+         style="cursor:pointer;">
+
+        <div class="card-body text-center">
+
+            <i class="bi bi-wrench-adjustable fs-1 text-primary"></i>
+
+            <h4 class="mt-3">
+                Mantenimiento Correctivo
+            </h4>
+
+            <p>
+                Diagnóstico de fallas,
+                reparación electrónica
+                y cambio de componentes.
+            </p>
+
+            <span class="btn btn-primary">
+                Ver trabajos realizados
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+    <!-- ============================================= -->
+<!-- VERIFICACIÓN DE MEDIDAS -->
+<!-- ============================================= -->
+
+<div class="col-md-4">
+
+    <div class="card shadow h-100 servicio-clic"
+         data-bs-toggle="modal"
+         data-bs-target="#galeriaVerificacion"
+         style="cursor:pointer;">
+
+        <div class="card-body text-center">
+
+            <i class="bi bi-speedometer2 fs-1 text-primary"></i>
+
+            <h4 class="mt-3">
+                Verificación de Medidas
+            </h4>
+
+            <p>
+                Evaluación del funcionamiento
+                y comprobación del desempeño
+                de equipos biomédicos.
+            </p>
+
+            <span class="btn btn-primary">
+                Ver trabajos realizados
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ===================================================== -->
+<!-- GALERÍA MANTENIMIENTO PREVENTIVO -->
+<!-- ===================================================== -->
+
+
+<div class="modal fade"
+     id="galeriaPreventivo"
+     tabindex="-1"
+     aria-hidden="true">
+
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+
+        <div class="modal-content">
+
+            <!-- ENCABEZADO -->
+
+            <div class="modal-header">
+
+                <h4 class="modal-title">
+                    Trabajos de Mantenimiento Preventivo
+                </h4>
+
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                </button>
+
+            </div>
+
+
+            <!-- CONTENIDO -->
+
+            <div class="modal-body">
+
+                <div id="carouselPreventivo"
+                     class="carousel slide"
+                     data-bs-ride="carousel">
+
+                    <div class="carousel-inner">
+
+
+                        <!-- IMAGEN 1 -->
+
+                        <div class="carousel-item active">
+
+                            <div class="row align-items-center">
+
+                                <div class="col-lg-7">
+
+                                    <img src="{{ url_for('static', filename='img/preventivo1.jpeg') }}"
+                                         class="d-block w-100 galeria-img"
+                                         alt="Mantenimiento preventivo">
+
+                                </div>
+
+                                <div class="col-lg-5">
+
+                                    <div class="historia-trabajo">
+
+                                        <h3>
+                                            Mantenimiento preventivo
+                                        </h3>
+
+                                        <h5>
+                                            Inspección interna del equipo
+                                        </h5>
+
+                                        <p>
+                                            Se realizó una inspección visual
+                                            de los componentes internos,
+                                            conexiones eléctricas y elementos
+                                            electrónicos del equipo.
+                                        </p>
+
+                                        <p>
+                                            El objetivo es identificar
+                                            condiciones que puedan afectar
+                                            el funcionamiento y realizar
+                                            las acciones preventivas
+                                            correspondientes.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- IMAGEN 2 -->
+
+                        <div class="carousel-item">
+
+                            <div class="row align-items-center">
+
+                                <div class="col-lg-7">
+
+                                    <img src="{{ url_for('static', filename='img/preventivo2.jpeg') }}"
+                                         class="d-block w-100 galeria-img"
+                                         alt="Mantenimiento preventivo">
+
+                                </div>
+
+                                <div class="col-lg-5">
+
+                                    <div class="historia-trabajo">
+
+                                        <h3>
+                                            Inspección de componentes
+                                        </h3>
+
+                                        <p>
+                                            Se realizó revisión visual
+                                            de los componentes y elementos
+                                            que hacen parte del equipo.
+                                        </p>
+
+                                        <p>
+                                            Durante el mantenimiento se
+                                            verifican condiciones de
+                                            limpieza, desgaste y estado
+                                            general de las piezas.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- IMAGEN 3 -->
+
+                        <div class="carousel-item">
+
+                            <div class="row align-items-center">
+
+                                <div class="col-lg-7">
+
+                                    <img src="{{ url_for('static', filename='img/preventivo3.jpeg') }}"
+                                         class="d-block w-100 galeria-img"
+                                         alt="Mantenimiento preventivo">
+
+                                </div>
+
+                                <div class="col-lg-5">
+
+                                    <div class="historia-trabajo">
+
+                                        <h3>
+                                            Revisión y limpieza
+                                        </h3>
+
+                                        <p>
+                                            Se efectuó revisión de los
+                                            componentes y superficies
+                                            del equipo.
+                                        </p>
+
+                                        <p>
+                                            Estas actividades permiten
+                                            conservar los elementos en
+                                            condiciones adecuadas para
+                                            su funcionamiento.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- IMAGEN 4 -->
+
+                        <div class="carousel-item">
+
+                            <div class="row align-items-center">
+
+                                <div class="col-lg-7">
+
+                                    <img src="{{ url_for('static', filename='img/preventivo4.jpeg') }}"
+                                         class="d-block w-100 galeria-img"
+                                         alt="Equipo biomédico">
+
+                                </div>
+
+                                <div class="col-lg-5">
+
+                                    <div class="historia-trabajo">
+
+                                        <h3>
+                                            Revisión de equipo biomédico
+                                        </h3>
+
+                                        <p>
+                                            Se realizó inspección general
+                                            del equipo y revisión de sus
+                                            diferentes elementos.
+                                        </p>
+
+                                        <p>
+                                            Se verifica el estado físico
+                                            y funcional de los componentes
+                                            antes de continuar con las
+                                            pruebas correspondientes.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- IMAGEN 5 -->
+
+                        <div class="carousel-item">
+
+                            <div class="row align-items-center">
+
+                                <div class="col-lg-7">
+
+                                    <img src="{{ url_for('static', filename='img/preventivo5.jpeg') }}"
+                                         class="d-block w-100 galeria-img"
+                                         alt="Mantenimiento de microscopio">
+
+                                </div>
+
+                                <div class="col-lg-5">
+
+                                    <div class="historia-trabajo">
+
+                                        <h3>
+                                            Mantenimiento de microscopio
+                                        </h3>
+
+                                        <p>
+                                            Se realizó revisión general
+                                            del equipo, verificando sus
+                                            diferentes componentes.
+                                        </p>
+
+                                        <p>
+                                            Se inspeccionan los elementos
+                                            ópticos y mecánicos para
+                                            mantener el equipo en buenas
+                                            condiciones de funcionamiento.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- IMAGEN 6 -->
+
+                        <div class="carousel-item">
+
+                            <div class="row align-items-center">
+
+                                <div class="col-lg-7">
+
+                                    <img src="{{ url_for('static', filename='img/preventivo6.jpeg') }}"
+                                         class="d-block w-100 galeria-img"
+                                         alt="Mantenimiento de microscopio">
+
+                                </div>
+
+                                <div class="col-lg-5">
+
+                                    <div class="historia-trabajo">
+
+                                        <h3>
+                                            Inspección de microscopio
+                                        </h3>
+
+                                        <p>
+                                            Se realizó inspección del
+                                            sistema óptico y mecánico
+                                            del equipo.
+                                        </p>
+
+                                        <p>
+                                            Se verifica el estado general
+                                            de sus componentes para
+                                            contribuir a un funcionamiento
+                                            adecuado.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- IMAGEN 7 -->
+
+                        <div class="carousel-item">
+
+                            <div class="row align-items-center">
+
+                                <div class="col-lg-7">
+
+                                    <img src="{{ url_for('static', filename='img/preventivo7.jpeg') }}"
+                                         class="d-block w-100 galeria-img"
+                                         alt="Mantenimiento de centrífuga">
+
+                                </div>
+
+                                <div class="col-lg-5">
+
+                                    <div class="historia-trabajo">
+
+                                        <h3>
+                                            Mantenimiento de centrífuga
+                                        </h3>
+
+                                        <p>
+                                            Se realizó revisión general
+                                            del equipo, verificando su
+                                            estado físico y funcional.
+                                        </p>
+
+                                        <p>
+                                            El mantenimiento preventivo
+                                            permite identificar condiciones
+                                            que puedan afectar el desempeño
+                                            del equipo.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- BOTÓN ANTERIOR -->
+
+                    <button class="carousel-control-prev"
+                            type="button"
+                            data-bs-target="#carouselPreventivo"
+                            data-bs-slide="prev">
+
+                        <span class="carousel-control-prev-icon"></span>
+
+                    </button>
+
+
+                    <!-- BOTÓN SIGUIENTE -->
+
+                    <button class="carousel-control-next"
+                            type="button"
+                            data-bs-target="#carouselPreventivo"
+                            data-bs-slide="next">
+
+                        <span class="carousel-control-next-icon"></span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ============================================= -->
+<!-- GALERÍA MANTENIMIENTO CORRECTIVO -->
+<!-- ============================================= -->
+
+<div class="modal fade"
+     id="galeriaCorrectivo"
+     tabindex="-1"
+     aria-hidden="true">
+
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title">
+                    Mantenimiento Correctivo
+                </h5>
+
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                </button>
+
+            </div>
+
+
+            <!-- CONTENIDO -->
+
+            <div class="modal-body">
+
+                <div id="carouselCorrectivo"
+                     class="carousel slide"
+                     data-bs-ride="carousel">
+
+                    <div class="carousel-inner">
+
+
+                        <!-- ================================= -->
+                        <!-- IMAGEN 1 -->
+                        <!-- ================================= -->
+
+                        <div class="carousel-item active">
+
+                            <div class="row align-items-center">
+
+                                <div class="col-lg-7">
+
+                                    <img src="{{ url_for('static', filename='img/mto correctivo1.jpeg') }}"
+                                         class="d-block w-100 galeria-img"
+                                         alt="Mantenimiento correctivo">
+
+                                </div>
+
+                                <div class="col-lg-5">
+
+                                    <div class="historia-trabajo">
+
+                                        <h3>
+                                            Mantenimiento correctivo
+                                        </h3>
+
+                                        <h5>
+                                            Diagnóstico y reparación electrónica
+                                        </h5>
+
+                                        <p>
+                                            Se realizó la revisión y diagnóstico
+                                            de los componentes electrónicos del
+                                            equipo, identificando las condiciones
+                                            que podían afectar su funcionamiento.
+                                        </p>
+
+                                        <p>
+                                            Posteriormente se efectuaron las
+                                            acciones correctivas necesarias para
+                                            recuperar el funcionamiento adecuado
+                                            del equipo.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- ================================= -->
+                        <!-- IMAGEN 2 -->
+                        <!-- ================================= -->
+
+                        <div class="carousel-item">
+
+                            <div class="row align-items-center">
+
+                                <div class="col-lg-7">
+
+                                    <img src="{{ url_for('static', filename='img/mto correctivo2.jpeg') }}"
+                                         class="d-block w-100 galeria-img"
+                                         alt="Mantenimiento correctivo">
+
+                                </div>
+
+                                <div class="col-lg-5">
+
+                                    <div class="historia-trabajo">
+
+                                        <h3>
+                                            Mantenimiento correctivo
+                                        </h3>
+
+                                        <h5>
+                                            Intervención interna del equipo
+                                        </h5>
+
+                                        <p>
+                                            Se realizó la apertura del equipo
+                                            para efectuar una inspección de sus
+                                            componentes internos, conexiones y
+                                            sistemas electrónicos.
+                                        </p>
+
+                                        <p>
+                                            La intervención permitió localizar
+                                            los elementos que requerían revisión
+                                            y reparación.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- ================================= -->
+                        <!-- IMAGEN 3 -->
+                        <!-- ================================= -->
+
+                        <div class="carousel-item">
+
+                            <div class="row align-items-center">
+
+                                <div class="col-lg-7">
+
+                                    <img src="{{ url_for('static', filename='img/mto correctivo3.jpeg') }}"
+                                         class="d-block w-100 galeria-img"
+                                         alt="Mantenimiento correctivo">
+
+                                </div>
+
+                                <div class="col-lg-5">
+
+                                    <div class="historia-trabajo">
+
+                                        <h3>
+                                            Mantenimiento correctivo
+                                        </h3>
+
+                                        <h5>
+                                            Revisión de componentes
+                                        </h5>
+
+                                        <p>
+                                            Se efectuó la revisión de los
+                                            componentes y conexiones asociados
+                                            al funcionamiento del equipo.
+                                        </p>
+
+                                        <p>
+                                            Se verificaron las condiciones de
+                                            operación para determinar las
+                                            acciones correctivas requeridas.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- ================================= -->
+                        <!-- IMAGEN 4 -->
+                        <!-- ================================= -->
+
+                        <div class="carousel-item">
+
+                            <div class="row align-items-center">
+
+                                <div class="col-lg-7">
+
+                                    <img src="{{ url_for('static', filename='img/mto correctivo4.jpeg') }}"
+                                         class="d-block w-100 galeria-img"
+                                         alt="Mantenimiento correctivo">
+
+                                </div>
+
+                                <div class="col-lg-5">
+
+                                    <div class="historia-trabajo">
+
+                                        <h3>
+                                            Mantenimiento correctivo
+                                        </h3>
+
+                                        <h5>
+                                            Reparación de sistema
+                                        </h5>
+
+                                        <p>
+                                            Se realizó la revisión del sistema
+                                            y de sus elementos de control,
+                                            identificando las condiciones que
+                                            requerían intervención técnica.
+                                        </p>
+
+                                        <p>
+                                            Se ejecutaron las acciones
+                                            correspondientes para restablecer
+                                            las condiciones de funcionamiento.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- ================================= -->
+                        <!-- IMAGEN 5 -->
+                        <!-- ================================= -->
+
+                        <div class="carousel-item">
+
+                            <div class="row align-items-center">
+
+                                <div class="col-lg-7">
+
+                                    <img src="{{ url_for('static', filename='img/mto correctivo5.jpeg') }}"
+                                         class="d-block w-100 galeria-img"
+                                         alt="Mantenimiento correctivo">
+
+                                </div>
+
+                                <div class="col-lg-5">
+
+                                    <div class="historia-trabajo">
+
+                                        <h3>
+                                            Mantenimiento correctivo
+                                        </h3>
+
+                                        <h5>
+                                            Reparación y recuperación
+                                        </h5>
+
+                                        <p>
+                                            Se realizó una intervención técnica
+                                            sobre el equipo para corregir la
+                                            condición identificada durante el
+                                            diagnóstico.
+                                        </p>
+
+                                        <p>
+                                            El trabajo estuvo orientado a
+                                            recuperar las condiciones adecuadas
+                                            de funcionamiento.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- ================================= -->
+                        <!-- IMAGEN 6 -->
+                        <!-- ================================= -->
+
+                        <div class="carousel-item">
+
+                            <div class="row align-items-center">
+
+                                <div class="col-lg-7">
+
+                                    <img src="{{ url_for('static', filename='img/mto correctivo6.jpeg') }}"
+                                         class="d-block w-100 galeria-img"
+                                         alt="Mantenimiento correctivo">
+
+                                </div>
+
+                                <div class="col-lg-5">
+
+                                    <div class="historia-trabajo">
+
+                                        <h3>
+                                            Mantenimiento correctivo
+                                        </h3>
+
+                                        <h5>
+                                            Intervención y reparación técnica
+                                        </h5>
+
+                                        <p>
+                                            Se realizó la intervención del
+                                            componente afectado y la revisión
+                                            de las condiciones del sistema.
+                                        </p>
+
+                                        <p>
+                                            Finalmente se verificó el resultado
+                                            de la intervención realizada.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- BOTÓN ANTERIOR -->
+
+                    <button class="carousel-control-prev"
+                            type="button"
+                            data-bs-target="#carouselCorrectivo"
+                            data-bs-slide="prev">
+
+                        <span class="carousel-control-prev-icon"></span>
+
+                        <span class="visually-hidden">
+                            Anterior
+                        </span>
+
+                    </button>
+
+
+                    <!-- BOTÓN SIGUIENTE -->
+
+                    <button class="carousel-control-next"
+                            type="button"
+                            data-bs-target="#carouselCorrectivo"
+                            data-bs-slide="next">
+
+                        <span class="carousel-control-next-icon"></span>
+
+                        <span class="visually-hidden">
+                            Siguiente
+                        </span>
+
+                    </button>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- ===================================================== -->
+<!-- GALERÍA VERIFICACIÓN DE MEDIDAS -->
+<!-- ===================================================== -->
+
+<div class="modal fade"
+     id="galeriaVerificacion"
+     tabindex="-1"
+     aria-hidden="true">
+
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+
+        <div class="modal-content">
+
+            <!-- ENCABEZADO -->
+
+            <div class="modal-header">
+
+                <h4 class="modal-title">
+                    Trabajos de Verificación de Medidas
+                </h4>
+
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                </button>
+
+            </div>
+
+
+            <!-- CONTENIDO -->
+
+            <div class="modal-body">
+
+                <div id="carouselVerificacion"
+                     class="carousel slide"
+                     data-bs-ride="carousel"
+                     data-bs-interval="4000">
+
+                    <div class="carousel-inner">
+
+
+                        <!-- ================================= -->
+                        <!-- IMAGEN 1 -->
+                        <!-- ================================= -->
+
+                        <div class="carousel-item active">
+
+                            <div class="row align-items-center">
+
+                                <div class="col-lg-7">
+
+                                    <img
+                                        src="{{ url_for('static', filename='img/verificacion de medidas1.jpeg') }}"
+                                        class="d-block w-100 galeria-img"
+                                        alt="Verificación de medidas">
+
+                                </div>
+
+
+                                <div class="col-lg-5">
+
+                                    <div class="historia-trabajo">
+
+                                        <h3>
+                                            Verificación de medidas
+                                        </h3>
+
+                                        <h5>
+                                            Verificación de temperatura
+                                        </h5>
+
+                                        <p>
+                                            Se realizó la verificación
+                                            del instrumento utilizado
+                                            para la medición de temperatura.
+                                        </p>
+
+                                        <p>
+                                            Se revisó la lectura indicada
+                                            por el equipo y sus condiciones
+                                            generales de funcionamiento.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- ================================= -->
+                        <!-- IMAGEN 2 -->
+                        <!-- ================================= -->
+
+                        <div class="carousel-item">
+
+                            <div class="row align-items-center">
+
+                                <div class="col-lg-7">
+
+                                    <img
+                                        src="{{ url_for('static', filename='img/verificacion de medidas2.jpeg') }}"
+                                        class="d-block w-100 galeria-img"
+                                        alt="Verificación de equipo">
+
+                                </div>
+
+
+                                <div class="col-lg-5">
+
+                                    <div class="historia-trabajo">
+
+                                        <h3>
+                                            Verificación de medidas
+                                        </h3>
+
+                                        <h5>
+                                            Verificación del equipo
+                                        </h5>
+
+                                        <p>
+                                            Se realizó la comprobación
+                                            del funcionamiento del equipo
+                                            y de los valores mostrados
+                                            durante la medición.
+                                        </p>
+
+                                        <p>
+                                            Se verificaron las condiciones
+                                            generales del instrumento antes
+                                            de continuar con su utilización.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- ================================= -->
+                        <!-- IMAGEN 3 -->
+                        <!-- ================================= -->
+
+                        <div class="carousel-item">
+
+                            <div class="row align-items-center">
+
+                                <div class="col-lg-7">
+
+                                    <img
+                                        src="{{ url_for('static', filename='img/verificacion de medidas3.jpeg') }}"
+                                        class="d-block w-100 galeria-img"
+                                        alt="Verificación de medidas">
+
+                                </div>
+
+
+                                <div class="col-lg-5">
+
+                                    <div class="historia-trabajo">
+
+                                        <h3>
+                                            Verificación de medidas
+                                        </h3>
+
+                                        <h5>
+                                            Control y comprobación
+                                        </h5>
+
+                                        <p>
+                                            Se realizó la revisión de las
+                                            condiciones de funcionamiento
+                                            del instrumento.
+                                        </p>
+
+                                        <p>
+                                            La actividad permite comprobar
+                                            que el equipo se encuentre en
+                                            condiciones adecuadas para
+                                            realizar sus mediciones.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- BOTÓN ANTERIOR -->
+
+                    <button class="carousel-control-prev"
+                            type="button"
+                            data-bs-target="#carouselVerificacion"
+                            data-bs-slide="prev">
+
+                        <span class="carousel-control-prev-icon"></span>
+
+                        <span class="visually-hidden">
+                            Anterior
+                        </span>
+
+                    </button>
+
+
+                    <!-- BOTÓN SIGUIENTE -->
+
+                    <button class="carousel-control-next"
+                            type="button"
+                            data-bs-target="#carouselVerificacion"
+                            data-bs-slide="next">
+
+                        <span class="carousel-control-next-icon"></span>
+
+                        <span class="visually-hidden">
+                            Siguiente
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PIE -->
+
+            <div class="modal-footer">
+
+                <button type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal">
+
+                    Cerrar
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- ===================================================== -->
+<!-- CONTACTO -->
+<!-- ===================================================== -->
+
+<section
+    id="contacto"
+    class="bg-light py-5">
+
+
+    <div class="container text-center">
+
+
+        <h2>
+
+            Contáctanos
+
+        </h2>
+
+
+        <p>
+
+            ¿Necesita asistencia técnica?
+            Nuestro equipo está listo para ayudarle.
+
+        </p>
+
+
+        <!-- WHATSAPP -->
+
+        <a
+            href="https://wa.me/573102350642"
+            target="_blank"
+            class="btn btn-success btn-lg me-2">
+
+            <i class="bi bi-whatsapp"></i>
+
+            WhatsApp
+
+        </a>
+
+
+        <!-- FACEBOOK -->
+
+        <a
+            href="https://www.facebook.com/share/1FcEyiPLwK/"
+            target="_blank"
+            class="btn btn-primary btn-lg">
+
+            <i class="bi bi-facebook"></i>
+
+            Facebook
+
+        </a>
+
+        <!-- instagram -->
+            <a href="https://www.instagram.com/mv.electromedicina?igsh=bHNsaWMxZ3VvOWNy"
+            target="_blank"
+            class="btn btn-danger">
+           <i class="bi bi-instagram"></i>
+             
+           instagram
+        </a>
+
+        
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ===================================================== -->
+<!-- PIE DE PÁGINA -->
+<!-- ===================================================== -->
+
+<footer
+    class="bg-dark text-white text-center py-3">
+
+
+    © 2026 MISAEL VILLARRAGA ELECTROMEDICINA S.A.S.
+
+    <br>
+
+    Todos los derechos reservados.
+
+
+</footer>
+
+
+
+<!-- ===================================================== -->
+<!-- BOOTSTRAP JAVASCRIPT -->
+<!-- ===================================================== -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+</body>
+
+</html>

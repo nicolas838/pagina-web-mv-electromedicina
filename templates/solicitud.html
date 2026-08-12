@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Solicitar Servicio - MISAEL VILLARRAGA ELECTROMEDICINA S.A.S.</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/estilos.css') }}">
+
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+
+    <header class="bg-white shadow-sm">
+
+        <div class="container py-3">
+
+            <div class="row align-items-center">
+
+                <!-- LOGO -->
+
+                <div class="col-lg-2 col-md-3 text-center">
+
+                    <img src="{{ url_for('static', filename='img/logo.jpg.jpeg') }}"
+                         alt="Logo"
+                         class="img-fluid"
+                         style="max-height:100px;">
+
+                </div>
+
+
+                <!-- EMPRESA -->
+
+                <div class="col-lg-10 col-md-9">
+
+                    <h2 class="fw-bold text-primary mb-1">
+
+                        MISAEL VILLARRAGA ELECTROMEDICINA S.A.S.
+
+                    </h2>
+
+                    <p class="text-secondary mb-0">
+
+                        Servicios Técnicos Biomédicos
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- FORMULARIO -->
+
+    <section class="py-5">
+
+        <div class="container">
+
+            <div class="row justify-content-center">
+
+                <div class="col-lg-7">
+
+                    <div class="card shadow">
+
+                        <div class="card-body p-4">
+
+                            <h2 class="text-center mb-4">
+
+                                Solicitud de Servicio
+
+                            </h2>
+
+                            <p class="text-center text-secondary">
+
+                                Complete los siguientes datos y envíe su solicitud por WhatsApp.
+
+                            </p>
+
+
+                            <form onsubmit="enviarWhatsApp(event)">
+
+                                <!-- NOMBRE CLIENTE -->
+
+                                <div class="mb-3">
+
+                                    <label class="form-label">
+                                        Nombre del cliente *
+                                    </label>
+
+                                    <input type="text"
+                                           id="cliente"
+                                           class="form-control"
+                                           required>
+
+                                </div>
+
+
+                                <!-- ENTIDAD -->
+
+                                <div class="mb-3">
+
+                                    <label class="form-label">
+                                        Nombre de la entidad *
+                                    </label>
+
+                                    <input type="text"
+                                           id="entidad"
+                                           class="form-control"
+                                           required>
+
+                                </div>
+
+
+                                <!-- CIUDAD -->
+
+                                <div class="mb-3">
+
+                                    <label class="form-label">
+                                        Ciudad *
+                                    </label>
+
+                                    <input type="text"
+                                           id="ciudad"
+                                           class="form-control"
+                                           required>
+
+                                </div>
+
+
+                                <!-- DEPARTAMENTO -->
+
+                                <div class="mb-3">
+
+                                    <label class="form-label">
+                                        Departamento *
+                                    </label>
+
+                                    <input type="text"
+                                           id="departamento"
+                                           class="form-control"
+                                           required>
+
+                                </div>
+
+
+                                <!-- CORREO -->
+
+                                <div class="mb-3">
+
+                                    <label class="form-label">
+                                        Correo electrónico *
+                                    </label>
+
+                                    <input type="email"
+                                           id="correo"
+                                           class="form-control"
+                                           required>
+
+                                </div>
+
+
+                                <!-- TELEFONO -->
+
+                                <div class="mb-4">
+
+                                    <label class="form-label">
+                                        Teléfono *
+                                    </label>
+
+                                    <input type="tel"
+                                           id="telefono"
+                                           class="form-control"
+                                           required>
+
+                                </div>
+
+                                <!-- TIPO DE SOLICITUD -->
+
+<div class="mb-3">
+
+    <label class="form-label">
+        Tipo de solicitud *
+    </label>
+
+    <select id="tipoSolicitud"
+            class="form-select"
+            required>
+
+        <option value="">
+            Seleccione una opción
+        </option>
+
+        <option value="Mantenimiento">
+            Mantenimiento
+        </option>
+
+        <option value="Reparación">
+            Reparación
+        </option>
+
+        <option value="Verificación">
+            Verificación
+        </option>
+
+        <option value="Otros">
+            Otros
+        </option>
+
+    </select>
+
+</div>
+<!-- ESPECIFICAR OTROS -->
+
+<div class="mb-3"
+     id="campoOtros"
+     style="display:none;">
+
+    <label class="form-label">
+        Especifique la solicitud
+    </label>
+
+    <textarea id="detalleOtros"
+              class="form-control"
+              rows="3"
+              placeholder="Escriba aquí el tipo de servicio que necesita"></textarea>
+
+</div>
+                                <!-- BOTON -->
+
+                                <div class="text-center">
+
+                                    <button type="submit"
+                                            class="btn btn-success btn-lg">
+
+                                        Enviar solicitud por WhatsApp
+
+                                    </button>
+
+                                </div>
+
+                            </form>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- VOLVER -->
+
+    <div class="text-center pb-5">
+
+        <a href="/"
+           class="btn btn-outline-primary">
+
+            ← Volver al inicio
+
+        </a>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+<script>
+
+    // MOSTRAR U OCULTAR EL CAMPO "OTROS"
+
+    document.getElementById("tipoSolicitud").addEventListener("change", function () {
+
+        const campoOtros = document.getElementById("campoOtros");
+        const detalleOtros = document.getElementById("detalleOtros");
+
+        if (this.value === "Otros") {
+
+            campoOtros.style.display = "block";
+            detalleOtros.required = true;
+
+        } else {
+
+            campoOtros.style.display = "none";
+            detalleOtros.required = false;
+            detalleOtros.value = "";
+
+        }
+
+    });
+
+
+    // ENVIAR SOLICITUD POR WHATSAPP
+
+    function enviarWhatsApp(event) {
+
+        event.preventDefault();
+
+        const cliente =
+            document.getElementById("cliente").value;
+
+        const entidad =
+            document.getElementById("entidad").value;
+
+        const ciudad =
+            document.getElementById("ciudad").value;
+
+        const departamento =
+            document.getElementById("departamento").value;
+
+        const correo =
+            document.getElementById("correo").value;
+
+        const telefono =
+            document.getElementById("telefono").value;
+
+        const tipoSolicitud =
+            document.getElementById("tipoSolicitud").value;
+
+        const detalleOtros =
+            document.getElementById("detalleOtros").value;
+
+
+        let mensaje =
+            "SOLICITUD DE SERVICIO\n\n" +
+
+            "Nombre del cliente: " +
+            cliente + "\n" +
+
+            "Nombre de la entidad: " +
+            entidad + "\n" +
+
+            "Ciudad: " +
+            ciudad + "\n" +
+
+            "Departamento: " +
+            departamento + "\n" +
+
+            "Correo: " +
+            correo + "\n" +
+
+            "Teléfono: " +
+            telefono + "\n" +
+
+            "Tipo de solicitud: " +
+            tipoSolicitud;
+
+
+        // SI SELECCIONÓ "OTROS"
+
+        if (tipoSolicitud === "Otros") {
+
+            mensaje +=
+                "\nEspecificación: " +
+                detalleOtros;
+
+        }
+
+
+        // NÚMERO DE WHATSAPP
+
+        const numeroWhatsApp = "573102350642";
+
+
+        // CREAR ENLACE
+
+        const url =
+            "https://wa.me/" +
+            numeroWhatsApp +
+            "?text=" +
+            encodeURIComponent(mensaje);
+
+
+        // ABRIR WHATSAPP
+
+        window.open(url, "_blank");
+
+    }
+
+</script>
