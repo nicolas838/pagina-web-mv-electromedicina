@@ -16,6 +16,14 @@ def sitemap():
     </url>
 </urlset>"""
 
+    
+@app.route('/robots.txt')
+def robots():
+    contenido = """User-agent: *
+Allow: /
+
+Sitemap: https://pagina-web-mv-electromedicina.onrender.com/sitemap.xml
+"""
     return Response(contenido, mimetype="application/xml")
 
 
