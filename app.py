@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, Response
+import os
 
 app = Flask(__name__)
 
@@ -10,36 +11,38 @@ def inicio():
 
 @app.route("/sitemap.xml")
 def sitemap():
-    xml = """<?xml version="1.0" encoding="UTF-8"?>
+    contenido = """<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://pagina-web-mv-electromedicina.onrender.com/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
     </url>
-</urlset>
-"""
+</urlset>"""
 
-    return Response(xml, content_type="application/xml; charset=utf-8")
+    return Response(contenido, content_type="application/xml")
 
 
 @app.route("/solicitud", methods=["GET", "POST"])
 def solicitud():
 
     if request.method == "POST":
-        cliente = request.form.get("cliente")
-        empresa = request.form.get("empresa")
-        correo = request.form.get("correo")
-        telefono = request.form.get("telefono")
-        equipo = request.form.get("equipo")
-        marca = request.form.get("marca")
-        serie = request.form.get("serie")
-        falla = request.form.get("falla")
-        prioridad = request.form.get("prioridad")
+
+        cliente = request.form.get("cliente", "")
+        empresa = request.form.get("empresa", "")
+        correo = request.form.get("correo", "")
+        telefono = request.form.get("telefono", "")
+        equipo = request.form.get("equipo", "")
+        marca = request.form.get("marca", "")
+        serie = request.form.get("serie", "")
+        falla = request.form.get("falla", "")
+        prioridad = request.form.get("prioridad", "")
 
         print("===== NUEVA SOLICITUD =====")
         print("Cliente:", cliente)
         print("Empresa:", empresa)
         print("Correo:", correo)
-        print("Telefono:", telefono)
+        print("Teléfono:", telefono)
         print("Equipo:", equipo)
         print("Marca:", marca)
         print("Serie:", serie)
@@ -50,7 +53,6 @@ def solicitud():
 
 
 if __name__ == "__main__":
-    import os
-
     port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=False), 5000))
     app.run(host="0.0.0.0", port=port, debug=False)
