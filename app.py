@@ -19,12 +19,13 @@ def sitemap():
     
 @app.route('/robots.txt')
 def robots():
-    contenido = """User-agent: *
-Allow: /
-
-Sitemap: https://pagina-web-mv-electromedicina.onrender.com/sitemap.xml
-"""
-        return Response(contenido, mimetype="text/plain")
+    return Response(
+        "User-agent: *\n"
+        "Allow: /\n"
+        "\n"
+        "Sitemap: https://pagina-web-mv-electromedicina.onrender.com/sitemap.xml\n",
+        mimetype="text/plain"
+    )
 
     return Response(contenido, mimetype="application/xml")
 
