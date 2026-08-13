@@ -24,6 +24,8 @@ Allow: /
 
 Sitemap: https://pagina-web-mv-electromedicina.onrender.com/sitemap.xml
 """
+        return Response(contenido, mimetype="text/plain")
+
     return Response(contenido, mimetype="application/xml")
 
 
